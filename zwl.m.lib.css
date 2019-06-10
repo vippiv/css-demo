@@ -1,0 +1,96 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-text-size-adjust: none;
+  font-size: 100px;
+}
+body {
+  font-family: "PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0.126rem; /*实际相当于14px*/
+  color:#3c3c3c;
+}
+html,body{ height: 100%; }
+ul li, ol li, dl li {
+  list-style-type: none
+}
+input{
+  color: #848486;
+}
+img {
+  border: 0;
+  vertical-align: bottom;
+}
+em {
+  font-style: normal;
+  font-size: inherit;
+}
+a {
+  text-decoration: none;
+  color:#333
+}
+i {
+  font-style: normal;
+}
+.clearfix::before,
+.clearfix::after{
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/*Galaxy S5*/
+@media (min-device-width : 360px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+    html{font-size: 112.5px;}
+}
+/*iphone 6*/
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+    html{font-size: 117.1875px;}
+}
+/*iphone6 plus*/
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+    html{font-size: 129.375px;}
+}
+/*Nexus 5X Nexus 6P*/
+@media (min-device-width : 412px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+    html{font-size: 128.75px;}
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #a9a9a9;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #a9a9a9;
+}
+
+input:-ms-input-placeholder{
+    color: #a9a9a9;
+}
+
+input::-webkit-input-placeholder{
+    color: #a9a9a9;
+}
+
+.m-wrap {
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow:hidden;
+}
