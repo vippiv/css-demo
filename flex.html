@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <link rel="stylesheet" href="css-lib/zwl.pc.lib.css">
+  <style>
+    .summary{ width: 1200px; margin: 0 auto 20px; line-height: 2; }
+    .demo_1 .box{ display: flex; color: white; text-align: center; width: 1000px; margin: 0 auto; }
+    .demo_1 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_1 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_1 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_1 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_1 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_1_1 .box{ display: flex; color: white; text-align: center; width: 1000px; margin: 0 auto; justify-content: flex-end; }
+    .demo_1_1 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_1_1 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_1_1 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_1_1 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_1_1 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_2 .box{ display: flex; color: white; text-align: center; width: 100px; margin: 0 auto; }
+    .demo_2 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_2 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_2 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_2 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_2 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_2_2 .box{ display: flex; color: white; text-align: center; width: 300px; flex-wrap: wrap; margin: 0 auto; }
+    .demo_2_2 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_2_2 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_2_2 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_2_2 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_2_2 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_2_3 .box{ display: flex; color: white; text-align: center; width: 300px; height: 200px; flex-direction: column-reverse; flex-wrap: wrap; margin: 0 auto; }
+    .demo_2_3 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_2_3 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_2_3 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_2_3 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_2_3 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_3 .box{ display: flex; flex-direction: row-reverse; color: white; text-align: center; width: 1000px; margin: 0 auto; }
+    .demo_3 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_3 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_3 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_3 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_3 .box > .item:nth-child(5){ background-color: #3a835d; }
+
+    .demo_4 .box{ display: flex; flex-direction: column; height: 320px; color: white; text-align: center; width: 100px; margin: 0 auto; }
+    .demo_4 .box > .item{ width: 80px; height: 80px; line-height: 80px; background-color: #0a76a4; }
+    .demo_4 .box > .item:nth-child(2){ background-color: #2d2f33; }
+    .demo_4 .box > .item:nth-child(3){ background-color: #2d3a4b; }
+    .demo_4 .box > .item:nth-child(4){ background-color: #3a8ee6; }
+    .demo_4 .box > .item:nth-child(5){ background-color: #3a835d; }
+    hr{ margin: 20px 0; }
+  </style>
+</head>
+<body>
+<div class="demo_1">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_1_1">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_2">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_2_2">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_2_3">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_3">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<div class="demo_4">
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</div>
+<hr>
+<div class="summary">
+  <h4>flex布局是决定父元素的直接子元素在横向和纵向上如何分布的属性</h4>
+  <ul>
+    <li>1、flex布局的子元素具有了inline属性</li>
+    <li>
+      2、父元素宽度权重大于所有子元素宽度总和的权重，除非设定flex-wap:wrap(高度无此特性，不论flex-direction是什么值)
+      <p style="padding-left: 2em;">a、父元素宽度小于子元素宽度总和时，子元素宽度会进行调整以适应父元素</p>
+    </li>
+    <li>3、设定flex-warp: wrap的情况下，可实现横向/纵向不足一行/一列时自动换行</li>
+    <li>4、flex-direction: (column/column-reverse)决定子元素以父元素上边框还是下边框为起点，紧靠起点的元素是第一个</li>
+    <li>5、flex-direction: (row/row-reverse)决定子元素以父元素左边框还是右边框为起点，紧靠起点的元素是第一个</li>
+    <li>6、column-reverse/row-reverse，不仅会更改子元素的对齐方式还会改变元素的顺序，justify-content:(flex-start/flex-end)仅改变子元素对齐方式，不改变子元素顺序</li>
+  </ul>
+  <p>参考文档：https://www.cnblogs.com/cswzl/p/7710668.html</p>
+</div>
+</body>
+</html>
